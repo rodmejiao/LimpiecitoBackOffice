@@ -5,56 +5,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cotizador de Servicio</title>
+    <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
-    <header>
-        <h1>Cotizacion</h1>
-        <span>Ingrese los siguientes datos por favor:</span>
+    <header class="header">
+        <h1 class="header-title">Cotizacion</h1>
+        <span class="header-description">Ingrese los siguientes datos por favor:</span>
     </header>
-    <form>
-
-        <fieldset>
+    <form class="form">
+        <fieldset class="form-fieldset form-service">
             <legend>Datos de Servicio</legend>
-            <div>
+            <div class="form-item">
                 <label for="">Cliente</label>
                 <input type="text">
             </div>
-            <div>
+            <div class="form-item">
                 <label for="">Direccion</label>
                 <input type="text">
             </div>
-            <div>
+            <div class="form-item">
                 <label for="">Fecha de Servicio</label>
                 <input type="text">
             </div>
-
         </fieldset>
-
-        <fieldset>
+        <fieldset class="form-fieldset form-article">
             <legend>Datos de Articulo(s)</legend>
-            <div>
+            <div class="form-item">
                 <label for="">Nombre</label>
                 <input type="text">
             </div>
-            <div>
+            <div class="form-item">
                 <label for="">Descripcion</label>
                 <input type="text">
             </div>
-            <div>
+            <div class="form-item">
                 <label for="">Cantidad</label>
                 <input type="text">
             </div>
-            <div>
+            <div class="form-item">
                 <label for="">Precio</label>
                 <input type="text">
             </div>
-            <div>
+            <div class="form-item">
                 <button>Agregar Articulo</button>
             </div>
         </fieldset>
-
-        <button>Generar Cotizacion</button>
-
+        <button class="form-Generate">Generar Cotizacion</button>
     </form>
 
 </body>
