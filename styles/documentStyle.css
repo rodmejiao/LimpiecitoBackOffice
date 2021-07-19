@@ -46,8 +46,14 @@
 .detailPDF table{
     border-collapse: collapse; 
     border: 2px solid #1f005d;
+    width: 80%;
 }
 
+th{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+}
 
 th,tr,td{
 
@@ -70,6 +76,10 @@ th{
 
 .commentsPDF ul{
     list-style: none;
+}
+
+.comment-user{
+    padding-bottom: 40px;
 }
 
 .footerPDF{
