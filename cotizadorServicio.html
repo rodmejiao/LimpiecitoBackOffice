@@ -7,61 +7,66 @@
     <title>Cotizador de Servicio</title>
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/documentStyle.css">
+    <script src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+    <script src="./scripts/generatepdf.js"></script>
+
 </head>
-<body><!-- 
+<body>
         <header class="header">
             <h1 class="header-title">Cotizacion</h1>
             <span class="header-description">Ingrese los siguientes datos por favor:</span>
         </header>
-        <form class="form">
+        <main class="form">
             <fieldset class="form-fieldset form-service">
                 <legend>Datos de Servicio</legend>
                 <div class="form-item">
                     <label for="">Cliente</label>
-                    <input type="text">
+                    <input type="text" id="clienteInput">
                 </div>
                 <div class="form-item">
                     <label for="">Direccion</label>
-                    <input type="text">
+                    <input type="text" id="direccionInput">
                 </div>
                 <div class="form-item">
                     <label for="">Fecha de Servicio</label>
-                    <input type="text">
+                    <input type="date" id="fechaInput">
                 </div>
             </fieldset>
             <fieldset class="form-fieldset form-article">
                 <legend>Datos de Articulo(s)</legend>
                 <div class="form-item">
-                    <label for="">Nombre</label>
-                    <input type="text">
+                    <label for="">Servicio</label>
+                    <input type="text" id="servicioInput">
                 </div>
                 <div class="form-item">
-                    <label for="">Descripcion</label>
-                    <input type="text">
+                    <label for="descripcionInput">Descripcion</label>
+                    <input type="text" id="descripcionInput">
                 </div>
                 <div class="form-item">
-                    <label for="">Cantidad</label>
-                    <input type="text">
+                    <label for="precioInput">Precio</label>
+                    <input type="number" id="precioInput">
                 </div>
                 <div class="form-item">
-                    <label for="">Precio</label>
-                    <input type="text">
+                    <label for="cantidadInput">Cantidad</label>
+                    <input type="number" id="cantidadInput" >
                 </div>
                 <div class="form-item">
-                    <button>Agregar Articulo</button>
+                    <button onclick="addArticulo()">Agregar Articulo</button>
                 </div>
             </fieldset>
-            <a class="form-Generate" href="#previewPDF" >Generar Cotizacion</a>
-        </form> -->
+           
+        </main> 
+
+        <button class="form-Generate" onclick="generatePDF()" >Generar Cotizacion</button>
 
         <section id="previewPDF" class="previewPDF" >
                 <div class="headerPDF">
                     <h2>Limpiecito</h2> <h2>Cotizacion</h2>
                 </div>
                 <div class="clientPDF">
-                  <p>Cliente: <span>Rodrigo Mejia Obispo </span></p>
-                  <p>Direccion: <span>Los Portales del Pinar Mz B lT 8 Comas</span></p>
-                  <p>Fecha Servicio: <span>14/05/2020</span></p>
+                  <p>Cliente: <span id="clienteIN"></span></p>
+                  <p>Direccion: <span id="direccionIN"></span></p>
+                  <p>Fecha Servicio: <span id="fechaIN"></span></p>
                 </div>
                 <div class="detailPDF">
                     
@@ -73,40 +78,12 @@
                             <th>Cantidad</th>
                             <th>SubTotal</th>
                         </thead>
-                        <tbody>
-                            <tr> <td>dsfsd</td> <td>sfsdfsdsdsdfsdfsdfsdfsdfsdfsdfsdfsdfsd</td> <td>230</td> <td>1</td> <td>230</td> </tr>
-                            <tr> <td>dsfsd</td> <td>sfsdfsdsdsdfsdfsdfsdfsdfsdfsdfsdfsdfsd</td> <td>230</td> <td>1</td> <td>230</td> </tr>
-                            <tr> <td>dsfsd</td> <td>sfsdfsdsdsdfsdfsdfsdfsdfsdfsdfsdfsdfsd</td> <td>230</td> <td>1</td> <td>230</td> </tr>
-
-                            <tr> <td>dsfsd</td> <td>sfsdfsdsdsdfsdfsdfsdfsdfsdfsdfsdfsdfsd</td> <td>230</td> <td>1</td> <td>230</td> </tr>
-
-                            <tr> <td>dsfsd</td> <td>sfsdfsdsdsdfsdfsdfsdfsdfsdfsdfsdfsdfsd</td> <td>230</td> <td>1</td> <td>230</td> </tr>
-
-                            <tr> <td>dsfsd</td> <td>sfsdfsdsdsdfsdfsdfsdfsdfsdfsdfsdfsdfsd</td> <td>230</td> <td>1</td> <td>230</td> </tr>
-                            <tr> <td>dsfsd</td> <td>sfsdfsdsdsdfsdfsdfsdfsdfsdfsdfsdfsdfsd</td> <td>230</td> <td>1</td> <td>230</td> </tr>
-                            <tr> <td>dsfsd</td> <td>sfsdfsdsdsdfsdfsdfsdfsdfsdfsdfsdfsdfsd</td> <td>230</td> <td>1</td> <td>230</td> </tr>
-                            <tr> <td>dsfsd</td> <td>sfsdfsdsdsdfsdfsdfsdfsdfsdfsdfsdfsdfsd</td> <td>230</td> <td>1</td> <td>230</td> </tr>
-                            <tr> <td>dsfsd</td> <td>sfsdfsdsdsdfsdfsdfsdfsdfsdfsdfsdfsdfsd</td> <td>230</td> <td>1</td> <td>230</td> </tr>
-                            <tr> <td>dsfsd</td> <td>sfsdfsdsdsdfsdfsdfsdfsdfsdfsdfsdfsdfsd</td> <td>230</td> <td>1</td> <td>230</td> </tr>
-                            <tr> <td>dsfsd</td> <td>sfsdfsdsdsdfsdfsdfsdfsdfsdfsdfsdfsdfsd</td> <td>230</td> <td>1</td> <td>230</td> </tr>
-                            <tr> <td>dsfsd</td> <td>sfsdfsdsdsdfsdfsdfsdfsdfsdfsdfsdfsdfsd</td> <td>230</td> <td>1</td> <td>230</td> </tr>
-                            <tr> <td>dsfsd</td> <td>sfsdfsdsdsdfsdfsdfsdfsdfsdfsdfsdfsdfsd</td> <td>230</td> <td>1</td> <td>230</td> </tr>
-                            <tr> <td>dsfsd</td> <td>sfsdfsdsdsdfsdfsdfsdfsdfsdfsdfsdfsdfsd</td> <td>230</td> <td>1</td> <td>230</td> </tr>
-                            <tr> <td>dsfsd</td> <td>sfsdfsdsdsdfsdfsdfsdfsdfsdfsdfsdfsdfsd</td> <td>230</td> <td>1</td> <td>230</td> </tr>
-
-                            <tr> <td>dsfsd</td> <td>sfsdfsdsdsdfsdfsdfsdfsdfsdfsdfsdfsdfsd</td> <td>230</td> <td>1</td> <td>230</td> </tr>
-                            <tr> <td>dsfsd</td> <td>sfsdfsdsdsdfsdfsdfsdfsdfsdfsdfsdfsdfsd</td> <td>230</td> <td>1</td> <td>230</td> </tr>
-                            <tr> <td>dsfsd</td> <td>sfsdfsdsdsdfsdfsdfsdfsdfsdfsdfsdfsdfsd</td> <td>230</td> <td>1</td> <td>230</td> </tr>
-
-                            
-                            <tr> <td>dsfsd</td> <td>sfsdfsdsdsdfsdfsdfsdfsdfsdfsdfsdfsdfsd</td> <td>230</td> <td>1</td> <td>230</td> </tr>
-
-
+                        <tbody id="article-container">
 
                         </tbody>
                         <tfoot>
                             <td colspan="4">Total</td>
-                             <td>xxxx</td>
+                             <td id="TotalAmount">xxxx</td>
                         </tfoot>
                     </table>
                 </div>
@@ -131,6 +108,7 @@
                     </ul>
                 </div>
         </section>
+
 
 </body>
 </html>
