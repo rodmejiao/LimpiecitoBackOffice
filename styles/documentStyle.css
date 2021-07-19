@@ -1,0 +1,78 @@
+.previewPDF{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.headerPDF{
+    width: 90%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    color: #1f005d;
+}
+
+.clientPDF{
+    width: 90%;
+    height: 100px;
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+
+.clientPDF p{
+    width: 100%;
+    color: #1f005d;
+}
+.clientPDF p span{
+    width: 100%;
+    color: #000000;
+}
+
+.detailPDF{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.detailPDF table{
+    border-collapse: collapse; 
+    border: 2px solid #1f005d;
+}
+
+
+th,tr,td{
+
+    border: 1px solid #1f005d;
+}
+
+th{
+    background-color: #83bce2;
+    color: #1f005d;
+}
+
+.commentsPDF{
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.commentsPDF h3{
+    width: 100%;
+}
+
+.commentsPDF ul{
+    list-style: none;
+}
+
+.footerPDF{
+    width: 100%;
+    height: 300px;
+    padding-top: 100px;
+}
