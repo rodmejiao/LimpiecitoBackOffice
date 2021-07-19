@@ -9,40 +9,26 @@ body{
 
 .header{
     width: 100%;
-    height: 10vh;
-    position: fixed;
-    background-color: red;
 }
 
 
 .form{
     width: 100%;
-    height: 85vh;
-    background-color: yellow;
+    margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
 .form-fieldset{
-    width: 100%;
+    width: 95%;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    padding-bottom: 20px;
 }
 
-.form-service{
-    background-color: aqua;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-}
-
-.form-article{
-    background-color: aqua;
-}
 
 .form-article button{
     width: 70%;
@@ -53,7 +39,6 @@ body{
 
 .form-item{
     width: 100%;
-    background-color: orange;
     display: flex;
     flex-wrap: wrap;
     padding-top:5px;
