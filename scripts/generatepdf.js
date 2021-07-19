@@ -10,7 +10,8 @@ function generatePDF() {
     document.getElementById('fechaIN').textContent=fecha
 
     
-
+    let totalAmount=document.getElementById(`TotalAmount`)
+    totalAmount.textContent=calcTotal()
 
     var element = document.getElementById('previewPDF');
     console.log(element);
@@ -42,8 +43,7 @@ function addArticulo() {
     tbody.appendChild(newRow)
     articuloList.push(newArticule)
 
-    let totalAmount=document.getElementById(`TotalAmount`)
-    totalAmount.textContent=calcTotal()
+
 
     document.getElementById('servicioInput').value=``
     document.getElementById('descripcionInput').value=``
